@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4RG-Ow-Eh6">
-                                <rect key="frame" x="183" y="433" width="49" height="30"/>
+                                <rect key="frame" x="183" y="459" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.16078431900000001" green="0.96078437569999997" blue="0.29803922770000002" alpha="1" colorSpace="deviceRGB"/>
                                 <state key="normal" title="Record">
