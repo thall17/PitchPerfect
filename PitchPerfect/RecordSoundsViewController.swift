@@ -23,6 +23,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
 
     @IBAction func recordAudio(_ sender: Any) {
+        print("start of recordAudio")
+
         recordButton.isEnabled = false
         stopRecordingButton.isEnabled = true
         recordingLabel.text = "Recording in progress"
@@ -39,30 +41,47 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder.isMeteringEnabled = true
         audioRecorder.prepareToRecord()
         audioRecorder.record()
+        print("end of recordAudio")
+
         
     }
     
     @IBAction func stopRecording(_ sender: Any) {
+        print("start of stopRecording")
         recordingLabel.text = "Tap to record"
         stopRecordingButton.isEnabled = false
         recordButton.isEnabled = true
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
-        
+        print("end of stopRecording")
+
         
     }
     
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+        print("start of audioRecorderDidFinishRecording")
+
         if flag {
             performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
         } else {
             print("recording was not successful")
         }
+        print("end of audioRecorderDidFinishRecording")
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
+        print("start of prepare")
+
+        if segue.identifier == "stopRecording" {
+            print("*preparing for segue*")
+            let playSoundsVC = segue.destination as! PlaySoundsViewController
+            let recordedAudioURL = sender as! URL
+            playSoundsVC.recordedAudioURL = recordedAudioURL
+        }
+        print("end of prepare")
+
     }
 }
 
