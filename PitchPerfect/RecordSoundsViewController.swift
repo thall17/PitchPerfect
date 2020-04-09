@@ -10,18 +10,21 @@ import UIKit
 import AVFoundation
 
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
-
+    // MARK: Variables
     var audioRecorder: AVAudioRecorder!
     
+    // MARK: Outlets
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var stopRecordingButton: UIButton!
     
+    // MARK: View
     override func viewDidLoad() {
         super.viewDidLoad()
         stopRecordingButton.isEnabled = false
     }
 
+    // MARK: Audio
     @IBAction func recordAudio(_ sender: Any) {
         print("start of recordAudio")
 
@@ -42,8 +45,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder.prepareToRecord()
         audioRecorder.record()
         print("end of recordAudio")
-
-        
     }
     
     @IBAction func stopRecording(_ sender: Any) {
@@ -56,7 +57,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         try! audioSession.setActive(false)
         print("end of stopRecording")
 
-        
     }
     
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
@@ -69,9 +69,9 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             print("recording was not successful")
         }
         print("end of audioRecorderDidFinishRecording")
-
     }
     
+    // MARK: Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("start of prepare")
 
@@ -82,7 +82,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             playSoundsVC.recordedAudioURL = recordedAudioURL
         }
         print("end of prepare")
-
     }
 }
 
