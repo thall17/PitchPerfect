@@ -97,7 +97,7 @@
                                                     <action selector="playSoundForButton:" destination="Trj-Lr-sHA" eventType="touchUpInside" id="20G-vW-kow"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQA-CC-4fm" userLabel="Chipmunk Button">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQA-CC-4fm" userLabel="Chipmunk Button">
                                                 <rect key="frame" x="207" y="0.0" width="207" height="208"/>
                                                 <state key="normal" image="Fast"/>
                                                 <connections>
@@ -109,14 +109,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sQy-n5-zkV">
                                         <rect key="frame" x="0.0" y="208" width="414" height="208"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gn-Rk-5K5" userLabel="Squirrel Button">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gn-Rk-5K5" userLabel="Squirrel Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="207" height="208"/>
                                                 <state key="normal" image="HighPitch"/>
                                                 <connections>
                                                     <action selector="playSoundForButton:" destination="Trj-Lr-sHA" eventType="touchUpInside" id="cAv-Jz-odx"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzM-q0-uPH" userLabel="Vader Button">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzM-q0-uPH" userLabel="Vader Button">
                                                 <rect key="frame" x="207" y="0.0" width="207" height="208"/>
                                                 <state key="normal" image="LowPitch"/>
                                                 <connections>
@@ -128,14 +128,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ogE-yX-KlP">
                                         <rect key="frame" x="0.0" y="416" width="414" height="208"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Uq-04-7Md" userLabel="Echo Button">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Uq-04-7Md" userLabel="Echo Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="207" height="208"/>
                                                 <state key="normal" image="Echo"/>
                                                 <connections>
                                                     <action selector="playSoundForButton:" destination="Trj-Lr-sHA" eventType="touchUpInside" id="s6e-Gj-iNa"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ikk-xN-nOl" userLabel="Reverb Button">
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ikk-xN-nOl" userLabel="Reverb Button">
                                                 <rect key="frame" x="207" y="0.0" width="207" height="208"/>
                                                 <state key="normal" image="Reverb"/>
                                                 <connections>
